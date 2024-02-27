@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    function root(value){
+        this.value = value
+        this.next = null
+    }
+
+    let a1 = new root(52)
+    let a2 = new root(85)
+    let a3 = new root(96)
+    let a4 = new root(75)
+    let a5 = new root(44)
+    let a6 = new root(33)
+    let a7 = new root(22)
+
+
+
+   a1.next = a2
+   a2.next = a5
+   a3.next = a4
+   a4.next = a5
+   a5.next = a6
+   a6.next = a7
+
+//    a2.next = a5
+//    a5.next = a6
+
+
+   let curr = a1
+
+   while(curr != null){
+    console.log(curr.value)
+    curr=curr.next
+   }
+
+</script>
