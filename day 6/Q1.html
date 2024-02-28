@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    function root(value){
+        this.value = value
+        this.next = null
+    }
+
+    let a1 = new root('K')
+    let a2 = new root('A')
+    let a3 = new root('K')
+    // let a4 = new root('A')
+    // let a5 = new root('K')
+   
+    
+    // let a7 = new root(22)
+
+
+
+   a1.next = a2
+   a2.next = a3
+//    a3.next = a4
+//    a4.next = a5
+  
+  
+
+   function palindrome(head){
+    let curr = head
+    let arr = []
+
+    while(curr != null){
+        arr.push(curr.value)
+        curr = curr.next
+    } 
+
+    return arr.join('')=== arr.reverse().join('')
+   }
+
+   console.log(palindrome(a1))
+
+
+
+
+
+</script>

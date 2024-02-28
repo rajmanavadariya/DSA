@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    function Node(value){
+        this.value = value
+        this.next = null
+    }
+     
+    const a1 = new Node(200)
+     const a2 = new Node(30)
+     const a3 = new Node(25)
+     const a4 = new Node(3)
+     const a5 = new Node(28)
+     const a6 = new Node(67)
+      
+      a1.next=a2
+      a2.next=a3
+      a3.next=a4
+      a4.next=a5
+      a5.next=a6
+
+
+function mid(head){
+    let slow = head
+    let fast = head
+    while(fast!=null){
+        slow=slow.next
+        fast=fast.next.next
+    }
+    return slow
+}
+let midn = mid(a1)
+console.log(midn)
+</script>
