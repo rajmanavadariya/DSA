@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    let nums = [1]
+    let sum1 = 0;
+    let sum2 = 0;
+
+    for(let i = 0; i < nums.length; i++){
+        sum1 = Math.max(0,sum1 + nums[i])
+        sum2 = Math.max(sum1,sum2)
+    }
+
+    console.log('The subarray [1] has the largest sum : ' + sum2)
+
+
+</script>
