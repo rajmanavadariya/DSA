@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    class stk{
+        constructor(){
+            this.stk = []
+        }
+
+        pushh(el){
+            this.stk.push(el)
+        }
+
+
+        size(){
+                return this.stk.length
+        }
+
+        empty(){
+            return this.stk.length===0
+        }
+
+        pop(){
+            if(this.empty()){
+                return "Stk is Empty"
+            }else{
+                return this.stk.pop()
+            }
+        }
+
+        peek(){
+            if(this.empty()){
+                return "Stk is Empty"
+            }else{
+                return this.stk[this.size()-1]
+            }
+        }
+    }
+
+    let Stack = new stk
+
+    Stack.pushh(7)
+    Stack.pushh(8)
+    Stack.pushh(9)
+
+    console.log(Stack)
+    console.log(Stack.size())
+    console.log(Stack.empty())
+    console.log(Stack.peek())
+
+</script>
