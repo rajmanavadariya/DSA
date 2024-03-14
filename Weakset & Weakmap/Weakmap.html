@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    let wem = new WeakMap()
+
+    let obj1 = {"name" : "Raj"}
+    let obj2 = {"name" : "Manavadariya"}
+
+    // wm.add(obj1)
+    // wm.add(obj2)
+
+    wem.set(obj2,"Privateeeee")
+
+    wem.delete(obj1)
+
+   
+
+    console.log(wem)
+    console.log( wem.has(obj2))
+</script>
