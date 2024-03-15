@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    let s = "()"
+
+    function balance(str){
+        let stack = []
+        for(let i=0; i<str.length; i++){
+            let char=str[i]
+
+            if(char==="{" || char==="[" || char==="("){
+                stack.push(char)
+            }else{
+                if(stack.length===0){
+                    return false
+                }
+                let top=stack.pop()
+                if(char==="}"&& top!="{" || char===")"&& top!="(" || char==="]"&& top!="["){
+                    return false
+                }
+            }
+        }
+        return stack.length === 0
+    }
+    console.log(balance(s))
+</script>
