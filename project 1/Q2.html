@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<!-- JS Start Here -->
+
+<script>
+
+function First(value){
+        this.value = value
+        this.next = null
+    }
+
+    const Num1 = new First(1)
+
+    const Num2 = new First(3)
+
+    const Num3 = new First(5)
+
+function Add(value){
+        this.value = value
+        this.next = null
+    }
+
+    const add1 = new Add(2)
+
+    const add2 = new Add(4)
+
+    const add3 = new Add(6)
+
+    Num1.next = add1
+    add1.next = Num2
+    Num2.next = add2
+    add2.next = Num3
+    Num3.next = add3
+
+   
+    Num2.next = Num3
+
+
+    let curr = Num1
+    while(curr != null){
+        console.log(curr.value)
+        curr = curr.next
+    }
+
+</script>
