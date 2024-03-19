@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    class Queue{
+        constructor(){
+            this.Queue = []
+        }
+        enqueue(el){
+            this.Queue.push(el)
+        }
+
+        size(){
+            return this.Queue.length
+        }
+
+        empty(){
+            return this.Queue.length === 0
+        }
+
+        front(){
+            if(this.empty()){
+                return "Queue is empty"
+            }else{
+                return this.Queue[0]
+            }
+        }
+    }
+
+
+
+    let queue = new Queue
+
+    queue.enqueue(90)
+    queue.enqueue(70)
+    queue.enqueue(60)
+
+    console.log(queue)
+    console.log(queue.size())
+    console.log(queue.empty())
+    console.log(queue.front())
+</script>
